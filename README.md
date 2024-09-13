@@ -92,15 +92,15 @@ This package will automatically register the event listeners and data will be in
 
 * Access Admin route index via browser by your config route prefix, by default `https://{yourhost}/database-email-templates`
 
-![image](https://github.com/hoanxuanmai/laravel-database-email-template/blob/master/images/index.png?row=true)
+![image](https://github.com/hoanxuanmai/laravel-database-email-template/blob/main/images/index.png?raw=true)
 
 * Create new 
 
-![image](https://github.com/hoanxuanmai/laravel-database-email-template/blob/master/images/create.png?row=true)
+![image](https://github.com/hoanxuanmai/laravel-database-email-template/blob/main/images/create.png?raw=true)
 
 * To save the content in the database, you must use the preview function, to make sure there are no errors, then the save button appears.
 
-![image](https://github.com/hoanxuanmai/laravel-database-email-template/blob/master/images/preview.png?row=true)
+![image](https://github.com/hoanxuanmai/laravel-database-email-template/blob/main/images/preview.png?raw=true)
 
 
 ## Please let me know if there is any problem or need any help. Your contribution is valuable to make the package better.
