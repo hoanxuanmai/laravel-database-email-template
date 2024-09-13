@@ -1,0 +1,41 @@
+{
+    "name": "hxm/laravel-database-email-template",
+    "version": "0.1",
+    "description": "Flexible customization of email template content, with blade file format. content will be stored in database.",
+    "keywords": [
+        "email-template",
+        "customer-email-template",
+        "database-email",
+        "emdatabase-email-template",
+        "laravel",
+        "hxm"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mai Xuân Hoàn",
+            "email": "hoanxuanmai@gmail.com",
+            "role": "Creator & Designer",
+            "homepage": "https://hoanxuanmai.github.io"
+        }
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "laravel/framework": "^7.0|^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HXM\\LaravelDatabaseEmailTemplate\\": "src/"
+        },
+        "classmap": []
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HXM\\LaravelDatabaseEmailTemplate\\LaravelDatabaseEmailTemplateServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
