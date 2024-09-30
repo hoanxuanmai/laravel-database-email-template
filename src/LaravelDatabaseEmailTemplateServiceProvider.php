@@ -10,12 +10,17 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelDatabaseEmailTemplateServiceProvider extends ServiceProvider
 {
-    function register() {}
+    function register()
+    {
+        $this->mergeConfigFrom(__DIR__ . '/../config/database_email_template.php', DatabaseEmailTemplateInstance::getConfigKey());
+
+        $this->app->singleton(DatabaseEmailTemplateInstance::class, function ($app) {
+            return new DatabaseEmailTemplateInstance();
+        });
+    }
 
     function boot()
     {
-
-        $this->mergeConfigFrom(__DIR__ . '/../config/database_email_template.php', DatabaseEmailTemplateInstance::getConfigKey());
 
         if ($this->app->runningInConsole()) {
             $this->loadInConsole();
@@ -23,9 +28,7 @@ class LaravelDatabaseEmailTemplateServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/../view', config('database_email_template.view.namespace', DatabaseEmailTemplateInstance::$viewDefaultNamespace));
 
-        $this->app->singleton(DatabaseEmailTemplateInstance::class, function ($app) {
-            return new DatabaseEmailTemplateInstance();
-        });
+
         class_alias(DatabaseEmailTemplate::class, 'DatabaseEmailTemplate');
 
         if (config('database_email_template.route.enable', true)) {
@@ -42,7 +45,7 @@ class LaravelDatabaseEmailTemplateServiceProvider extends ServiceProvider
         ], 'database_email_template_config');
 
         $this->publishes([
-            __DIR__ . '/../database/migrations' => database_path('migrantions')
+            __DIR__ . '/../database/migrations' => database_path('migrations')
         ], 'database_email_template_migration');
 
         $this->commands([DatabaseEmailTemplateCreateCommand::class]);

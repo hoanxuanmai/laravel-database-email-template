@@ -1,6 +1,6 @@
 {
     "name": "hxm/laravel-database-email-template",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Flexible customization of email template content, with blade file format. content will be stored in database.",
     "keywords": [
         "email-template",
